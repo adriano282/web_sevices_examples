@@ -14,4 +14,7 @@ ant -Dwar.name=addressing deploy
 
 The command above creates an addressing.war file and deploys the application using the build.xml settings.
 
+References:
+
+https://blogs.oracle.com/artf/entry/using_jax_ws_2_1
 
