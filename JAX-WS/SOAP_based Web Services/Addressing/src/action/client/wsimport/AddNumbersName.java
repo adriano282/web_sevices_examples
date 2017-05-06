@@ -36,6 +36,29 @@ public interface AddNumbersName {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "addNumbersExplicitFaultAction", targetNamespace = "http://addnumbers.org/targetNamespace", className = "action.client.wsimport.AddNumbersExplicitFaultAction")
+    @ResponseWrapper(localName = "addNumbersExplicitFaultActionResponse", targetNamespace = "http://addnumbers.org/targetNamespace", className = "action.client.wsimport.AddNumbersExplicitFaultActionResponse")
+    @Action(input = "input", output = "output", fault = {
+        @FaultAction(className = AddNumberException_Exception.class, value = "http://addnumbers.org/targetNamespace/fault/addnumbers")
+    })
+    public int addNumbersExplicitFaultAction(
+        @WebParam(name = "arg0", targetNamespace = "")
+        int arg0,
+        @WebParam(name = "arg1", targetNamespace = "")
+        int arg1)
+        throws AddNumberException_Exception
+    ;
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns int
+     * @throws AddNumberException_Exception
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
     @RequestWrapper(localName = "addNumbersExplicitInputOutputAction", targetNamespace = "http://addnumbers.org/targetNamespace", className = "action.client.wsimport.AddNumbersExplicitInputOutputAction")
     @ResponseWrapper(localName = "addNumbersExplicitInputOutputActionResponse", targetNamespace = "http://addnumbers.org/targetNamespace", className = "action.client.wsimport.AddNumbersExplicitInputOutputActionResponse")
     @Action(input = "http://addnumbers.org/targetNamespace/input", output = "http://addnumbers.org/targetNamespace/output", fault = {

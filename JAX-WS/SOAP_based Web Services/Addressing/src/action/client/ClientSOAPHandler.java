@@ -43,7 +43,7 @@ public class ClientSOAPHandler implements SOAPHandler {
 	}
 
 	public boolean handleMessage(MessageContext context) {
-		System.out.println("ServerSOAPHandler.handleMessage");
+		System.out.println("ClientOAPHandler.handleMessage");
 		boolean outbound = (Boolean) context.get(MessageContext.MESSAGE_OUTBOUND_PROPERTY);
 
 		if (outbound) {
@@ -62,7 +62,7 @@ public class ClientSOAPHandler implements SOAPHandler {
 	}
 
 	public boolean handleFault(MessageContext context) {
-		System.out.println("ServerSOAPHandler.handleFault");
+		System.out.println("ClientSOAPHandler.handleFault");
 		boolean outbound = (Boolean) context.get(MessageContext.MESSAGE_OUTBOUND_PROPERTY);
 
 		if (outbound) {
@@ -84,7 +84,7 @@ public class ClientSOAPHandler implements SOAPHandler {
 						detailName = ((SOAPMessageContext)context).getMessage().getSOAPBody().getFault().getDetail().toString();
 						System.out.println("detailName" + detailName);
 					}
-					catch (Exception e) { e.printStackTrace(); }
+					catch (Exception e) { }
 				}
 			}
 			catch (Exception e) { e.printStackTrace(); }

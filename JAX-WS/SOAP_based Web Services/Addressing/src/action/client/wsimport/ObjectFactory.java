@@ -39,16 +39,26 @@ public class ObjectFactory {
     private final static QName _GetEPR_QNAME = new QName("http://addnumbers.org/targetNamespace", "getEPR");
     private final static QName _AddNumberException_QNAME = new QName("http://addnumbers.org/targetNamespace", "AddNumberException");
     private final static QName _From_QNAME = new QName("http://www.w3.org/2005/08/addressing", "From");
+    private final static QName _AddNumbersExplicitFaultAction_QNAME = new QName("http://addnumbers.org/targetNamespace", "addNumbersExplicitFaultAction");
     private final static QName _Metadata_QNAME = new QName("http://www.w3.org/2005/08/addressing", "Metadata");
     private final static QName _AddNumbersExplicitInputOutputAction_QNAME = new QName("http://addnumbers.org/targetNamespace", "addNumbersExplicitInputOutputAction");
     private final static QName _GetEPRResponse_QNAME = new QName("http://addnumbers.org/targetNamespace", "getEPRResponse");
     private final static QName _RelatesTo_QNAME = new QName("http://www.w3.org/2005/08/addressing", "RelatesTo");
+    private final static QName _AddNumbersExplicitFaultActionResponse_QNAME = new QName("http://addnumbers.org/targetNamespace", "addNumbersExplicitFaultActionResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: action.client.wsimport
      * 
      */
     public ObjectFactory() {
+    }
+
+    /**
+     * Create an instance of {@link AddNumbersExplicitFaultActionResponse }
+     * 
+     */
+    public AddNumbersExplicitFaultActionResponse createAddNumbersExplicitFaultActionResponse() {
+        return new AddNumbersExplicitFaultActionResponse();
     }
 
     /**
@@ -73,6 +83,14 @@ public class ObjectFactory {
      */
     public AddNumbersExplicitInputOutputActionResponse createAddNumbersExplicitInputOutputActionResponse() {
         return new AddNumbersExplicitInputOutputActionResponse();
+    }
+
+    /**
+     * Create an instance of {@link AddNumbersExplicitFaultAction }
+     * 
+     */
+    public AddNumbersExplicitFaultAction createAddNumbersExplicitFaultAction() {
+        return new AddNumbersExplicitFaultAction();
     }
 
     /**
@@ -274,6 +292,15 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddNumbersExplicitFaultAction }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://addnumbers.org/targetNamespace", name = "addNumbersExplicitFaultAction")
+    public JAXBElement<AddNumbersExplicitFaultAction> createAddNumbersExplicitFaultAction(AddNumbersExplicitFaultAction value) {
+        return new JAXBElement<AddNumbersExplicitFaultAction>(_AddNumbersExplicitFaultAction_QNAME, AddNumbersExplicitFaultAction.class, null, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link MetadataType }{@code >}}
      * 
      */
@@ -307,6 +334,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://www.w3.org/2005/08/addressing", name = "RelatesTo")
     public JAXBElement<RelatesToType> createRelatesTo(RelatesToType value) {
         return new JAXBElement<RelatesToType>(_RelatesTo_QNAME, RelatesToType.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link AddNumbersExplicitFaultActionResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://addnumbers.org/targetNamespace", name = "addNumbersExplicitFaultActionResponse")
+    public JAXBElement<AddNumbersExplicitFaultActionResponse> createAddNumbersExplicitFaultActionResponse(AddNumbersExplicitFaultActionResponse value) {
+        return new JAXBElement<AddNumbersExplicitFaultActionResponse>(_AddNumbersExplicitFaultActionResponse_QNAME, AddNumbersExplicitFaultActionResponse.class, null, value);
     }
 
 }

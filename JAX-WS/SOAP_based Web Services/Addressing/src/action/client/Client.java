@@ -28,7 +28,10 @@ public class Client {
 			System.out.println("Service is null.");
 			System.out.println("Instacing a new Service...");
 			service = new AddNumbersServiceName();
+
 		}
+		service.setHandlerResolver(new ClientHandlerResolver());
+
 		port = service.getPort(AddNumbersName.class, enabledRequiredwsf);
 		return port;
 	}
@@ -64,7 +67,7 @@ public class Client {
 			client.getPort();
 			client.getEPR();
             client.callAddNumbersExplicitInputOutputAction();
-     //       client.callAddNumbersExplicitFaultAction();
+            client.callAddNumbersExplicitFaultAction();
         } catch(Exception e) {
             e.printStackTrace();
         }
@@ -80,7 +83,7 @@ public class Client {
             e.printStackTrace();
         }
    }
-/*
+
    public void callAddNumbersExplicitFaultAction() {
         try {
 			System.out.println("Invoking addNumbersExplicitFaultAction operation ...");
@@ -91,5 +94,5 @@ public class Client {
             e.printStackTrace();
         }
    }
-   */
+   
 }
