@@ -12,6 +12,6 @@ The build folder's content was organized using the ant command:
 
 ant -Dwar.name=addressing deploy
 
-The command above create a addressing.war file and deploy the application using the build.xml settings.
+The command above creates an addressing.war file and deploys the application using the build.xml settings.
 
 
